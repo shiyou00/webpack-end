@@ -10,5 +10,6 @@
         "useESModules": false
       }
     ]
-  ]
+  ],
+  "presets": [["@babel/preset-react"]]
 }
