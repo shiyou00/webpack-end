@@ -13,7 +13,7 @@ module.exports = {
     hot: true // 开始热更新
   },
   entry: { // 入口文件
-    main:'./src/index.js'
+    main:'./src/index.ts'
   },
   output: { // 出口文件
     publicPath:"",
@@ -22,6 +22,11 @@ module.exports = {
   },
   module:{ // loader 配置
     rules:[
+      {
+        test:/\.tsx?$/,
+        use:'ts-loader',
+        exclude: /node_modules/
+      },
       {
         test: /\.js$/, // 正则匹配js文件
         exclude: /node_modules/, // 排除 node_modules 文件夹
